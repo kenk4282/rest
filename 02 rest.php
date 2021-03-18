@@ -28,7 +28,7 @@
 
     function add_data($debug_mode, $data){
         $mydb = new db("root", "", "person_data", $debug_mode);
-        $data = $mydb->query("INSERT INTO `person`(`name`, `age`)
+        $data = $mydb->insert("INSERT INTO `person`(`name`, `age`)
             VALUES ('{$data['u_name']}','{$data['u_age']}')");
         $mydb->close();
     }

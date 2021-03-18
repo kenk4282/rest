@@ -21,6 +21,11 @@
             return $data;
         }
 
+        function insert($sql){
+            $result = $this->db->query($sql);
+            $this->debug_text($sql);
+        }
+
         function debug_text($text){
             if($this->debug){
                 echo "Debug : {$text}<br>";

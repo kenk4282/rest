@@ -30,6 +30,7 @@
             xhttp.onreadystatechange = function(){
                 console.log(this.readyState + "," + this.status);
                 if(this.readyState == 4 && this.status == 200){
+                    alert(this.responseText);
                 }
             }
             n = document.getElementById("u_name");
